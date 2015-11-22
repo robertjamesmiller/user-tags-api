@@ -6,6 +6,9 @@ gem 'rails', '4.2.5'
 gem 'mysql2'
 gem 'grape'
 gem 'hashie-forbidden_attributes'
+# Redis gems
+gem "hiredis"
+gem "redis", :require => ["redis", "redis/connection/hiredis"]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

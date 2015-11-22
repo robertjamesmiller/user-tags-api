@@ -3,6 +3,9 @@ require 'rails_helper'
 RSpec.describe Base::API, type: :request do
 
   before :each do
+    # clear redis before each test
+    $redis.flushdb
+    
     @env ||= {}
     @env['CONTENT_TYPE']= "application/json"
   end

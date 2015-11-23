@@ -34,6 +34,7 @@
 * rake db:migrate && rake db:migrate RAILS_ENV=test
 * [bundle exec rspec](https://travis-ci.org/robertjamesmiller/user-tags-api)
 * rails server
+ * Configure your client or webapp to use http://localhost:3000/api/v1/users/
 
 ## Design Choices
 

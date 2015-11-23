@@ -120,4 +120,4 @@
  
 **Returns:**
 
- - users ([{id , email}])
+ - users ([ { id , email }, { id , email }, { id , email }, etc. ])

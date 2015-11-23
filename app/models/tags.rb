@@ -1,7 +1,9 @@
 class Tags
   
   def initialize( tag_array )
-    @tag_array = tag_array
+    # remove empty strings and strings containing spaces
+    # @TODO: is there a better place to cleanse the array?
+    @tag_array = tag_array.reject { |tag| tag.strip.empty? }
   end
   
   def add_user(user)

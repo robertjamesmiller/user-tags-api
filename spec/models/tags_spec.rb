@@ -17,6 +17,13 @@ RSpec.describe Tags, type: :model do
   
       expect(@user_one.tags).to eq([])   
     end
+    
+    it 'should do nothing when tags in array are empty string or blank spaces' do        
+      tags = Tags.new(["","  "])        
+      tags.add_user(@user_one)
+  
+      expect(@user_one.tags).to eq([])   
+    end
         
     it 'should associate a tag to the user' do        
       tags = Tags.new(["funny"])        
@@ -56,6 +63,13 @@ RSpec.describe Tags, type: :model do
     
     it 'should do nothing when tags array is empty' do        
       tags = Tags.new([])        
+      tags.remove_user(@user_one)
+  
+      expect(@user_one.tags).to include("funny","cyclist") 
+    end
+    
+    it 'should do nothing when tags in array are empty string or blank spaces' do        
+      tags = Tags.new(["","  "])        
       tags.remove_user(@user_one)
   
       expect(@user_one.tags).to include("funny","cyclist") 
@@ -137,7 +151,7 @@ RSpec.describe Tags, type: :model do
         tags.add_user(@user_one)
         
         @user_two = User.new
-        @user_two.email = "test@test.com"
+        @user_two.email = "test2@test.com"
         @user_two.save
         
         cyclist_tag = Tags.new(["cyclist"])    

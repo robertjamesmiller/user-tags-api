@@ -24,7 +24,7 @@
 
 * Install RVM
 * rvm install ruby-2.2.3
-* rvm use ruby-2.2.3ruby 
+* rvm use ruby-2.2.3
 * gem install bundler
 
 ### Git clone this project, then
@@ -48,14 +48,13 @@
 
 ### Potential future features
 
-* Provide devices (e.g., smart watches) with a user specific token with which to authenticate requests and authorize them to a limited set of actions specific to their profile or their friend's profiles.
+* Provide devices (e.g., smart watches) with a user specific token with which to authenticate requests and authorize them to a limited set of actions specific to their profile or their friends' profiles.
 * Use Redis to store Rails sessions and REST API user tokens, both with strategically configured expirations.
 * [Provide a web user interface using features from Bootstrap and AngularJS (e.g., ngResource, angular-ui-grid, X-CSRF-Tokens).](https://github.com/sparc-request/sparc-request/pull/219/files?diff=unified)
   * Develop a standard Rails controller that responds to JSON requests that will be rendered by AngularJS.
 * If a user is deleted from MySQL, remove all references of that user from Redis.
 * Restrict the length of an individual tag to prevent Redis performance issues.
   
-
 ## REST API with Basic Authentication
 
 ### POST /api/v1/users(.json)
@@ -66,7 +65,7 @@
 
  - email (String) (*required*) : Your email. 
  
-** Returns:**
+**Returns:**
 
  - id
  - email
@@ -80,7 +79,7 @@
  - id (Integer) (*required*) : User id. 
  - tags ([String]) (*required*) : List of tags. 
  
-** Returns:**
+**Returns:**
 
  - nothing
 
@@ -93,7 +92,7 @@
  - id (Integer) (*required*) : User id. 
  - tags ([String]) (*required*) : List of tags. 
 
-** Returns:**
+**Returns:**
 
  - nothing
 
@@ -105,7 +104,7 @@
 
  - id (Integer) (*required*) : User id. 
 
-** Returns:**
+**Returns:**
 
  - id
  - email
@@ -119,6 +118,6 @@
 
  - tags ([String]) (*required*) : List of tags. 
  
-** Returns:**
+**Returns:**
 
  - users ([{id , email}])
